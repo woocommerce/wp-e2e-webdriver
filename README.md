@@ -1,5 +1,6 @@
 wp-e2e-webdriver
 ================
+**This will be moved to under woocommerce org with other related packages**
 
 Webdriver manager and helper for WordPress. Most of the good stuff were shamelessly
 copied from [wp-e2e-tests](https://github.com/Automattic/wp-e2e-tests). Thanks to
@@ -23,4 +24,5 @@ dependents can use that:
 
 * wp-e2e-page-objects &mdash; Repo will be published later. WordPress Page Objects
   package
+* wc-e2e-page-objects &mdash; WooCommerce Page Objects package
 * WooCommerce extensions that will have e2e tests that use wp-e2e-page-objects
