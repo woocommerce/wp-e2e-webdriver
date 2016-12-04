@@ -9,11 +9,9 @@ import test from 'selenium-webdriver/testing';
 /**
  * Internal dependencies
  */
-import { WebDriverManager, WebDriverHelper } from '../src/index';
+import { WebDriverManager, WebDriverHelper as helper } from '../src/index';
 
 const startBrowserTimeout = 30000;
-
-const helper = WebDriverHelper;
 
 chai.use( chaiAsPromised );
 
@@ -39,6 +37,10 @@ test.describe( 'Creates WebDriver client for chrome', () => {
 
 	test.it( 'creates instance of WebDriver', () => {
 		assert( driver instanceof WebDriver );
+	} );
+
+	test.it( 'has https://automattic.com as the default base URL', () => {
+		assert( 'https://automattic.com' === manager.getBaseUrl() );
 	} );
 
 	test.it( 'has desktop as default screen size config', () => {

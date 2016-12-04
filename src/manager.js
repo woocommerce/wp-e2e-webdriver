@@ -15,6 +15,7 @@ const saucePreRunScriptURL = 'https://raw.githubusercontent.com/Automattic/wp-e2
 const saucePreRunWinScriptURL = 'https://raw.githubusercontent.com/Automattic/wp-e2e-tests/master/fix-saucelabs-etc-hosts.bat';
 
 const defaultArgs = {
+	baseUrl: 'https://automattic.com',
 	resizeBrowserWindow: true,
 	useCustomUA: true,
 	proxy: 'direct'
@@ -235,5 +236,9 @@ export default class Manager {
 					'values are "direct" or "system"'
 				);
 		}
+	}
+
+	getBaseUrl() {
+		return this.config.baseUrl;
 	}
 }
