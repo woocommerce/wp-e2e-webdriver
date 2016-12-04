@@ -1,6 +1,5 @@
 wp-e2e-webdriver
 ================
-**This will be moved to under woocommerce org with other related packages**
 
 Webdriver manager and helper for WordPress. Most of the good stuff were shamelessly
 copied from [wp-e2e-tests](https://github.com/Automattic/wp-e2e-tests). Thanks to
@@ -11,11 +10,24 @@ site.
 
 ## Install
 
-TODO
+```
+npm install wp-e2e-webdriver
+```
 
 ## Usage
 
-TODO
+~~~js
+import { WebDriverManager, WebDriverHelper } from 'wp-e2e-webdriver'
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+driver.get( 'https://automattic.com/work-with-us/' );
+helper.waitTillPresentAndDisplayed(
+	driver,
+	By.css( '#content' )
+);
+~~~
 
 ## Dependents
 
