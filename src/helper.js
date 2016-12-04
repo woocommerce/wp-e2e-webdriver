@@ -12,6 +12,24 @@ export function waitTillPresentAndDisplayed( driver, selector, waitMs = 10000 ) 
 	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be present and displayed` );
 }
 
+export function isEventuallyPresentAndDisplayed( driver, selector, waitMs = 10000 ) {
+	return driver.wait( function() {
+		return driver.findElement( selector ).then( function( element ) {
+			return element.isDisplayed().then( function() {
+				return true;
+			}, function() {
+				return false;
+			} );
+		}, function() {
+			return false;
+		} );
+	}, waitMs ).then( ( shown ) => {
+		return shown;
+	}, ( ) => {
+		return false;
+	} );
+}
+
 export function clickWhenClickable( driver, selector, waitMs = 10000 ) {
 	return driver.wait( function() {
 		return driver.findElement( selector ).then( function( element ) {
