@@ -1,4 +1,6 @@
-export function waitTillPresentAndDisplayed( driver, selector, waitMs = 10000 ) {
+export const defaultWaitMs = 10000; // 10s
+
+export function waitTillPresentAndDisplayed( driver, selector, waitMs = defaultWaitMs ) {
 	return driver.wait( function() {
 		return driver.findElement( selector ).then( function( element ) {
 			return element.isDisplayed().then( function() {
@@ -12,7 +14,7 @@ export function waitTillPresentAndDisplayed( driver, selector, waitMs = 10000 ) 
 	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be present and displayed` );
 }
 
-export function isEventuallyPresentAndDisplayed( driver, selector, waitMs = 10000 ) {
+export function isEventuallyPresentAndDisplayed( driver, selector, waitMs = defaultWaitMs ) {
 	return driver.wait( function() {
 		return driver.findElement( selector ).then( function( element ) {
 			return element.isDisplayed().then( function() {
@@ -30,7 +32,7 @@ export function isEventuallyPresentAndDisplayed( driver, selector, waitMs = 1000
 	} );
 }
 
-export function clickWhenClickable( driver, selector, waitMs = 10000 ) {
+export function clickWhenClickable( driver, selector, waitMs = defaultWaitMs ) {
 	return driver.wait( function() {
 		return driver.findElement( selector ).then( function( element ) {
 			return element.click().then( function() {
@@ -62,4 +64,24 @@ export function unsetCheckbox( driver, selector ) {
 			}
 		} );
 	} );
+}
+
+export function setWhenSettable( driver, selector, value, { secureValue = false, waitMs = defaultWaitMs } = {} ) {
+	const logValue = secureValue === true ? '*********' : value;
+	const self = this;
+
+	return driver.wait( function() {
+		return driver.findElement( selector ).then( function( element ) {
+			self.waitForFieldClearable( driver, selector );
+			return element.sendKeys( value ).then( function() {
+				return element.getAttribute( 'value' ).then( ( actualValue ) => {
+					return actualValue === value;
+				} );
+			}, function() {
+				return false;
+			} );
+		}, function() {
+			return false;
+		} );
+	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be settable to: '${ logValue }'` );
 }
