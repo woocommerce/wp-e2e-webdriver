@@ -21,7 +21,7 @@ const expect = chai.expect;
 let manager;
 let driver;
 
-test.describe( 'Creates WebDriver client for chrome', () => {
+test.describe( 'WebDriver client for chrome', () => {
 	test.before( 'Start chrome', function() {
 		this.timeout( startBrowserTimeout );
 
