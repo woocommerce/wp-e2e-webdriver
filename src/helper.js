@@ -66,6 +66,22 @@ export function unsetCheckbox( driver, selector ) {
 	} );
 }
 
+export function waitForFieldClearable( driver, selector, waitMs = defaultWaitMs ) {
+	return driver.wait( function() {
+		return driver.findElement( selector ).then( ( element ) => {
+			return element.clear().then( function() {
+				return element.getAttribute( 'value' ).then( ( value ) => {
+					return value === '';
+				} );
+			}, function() {
+				return false;
+			} );
+		}, function() {
+			return false;
+		} );
+	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be clearable` );
+}
+
 export function setWhenSettable( driver, selector, value, { secureValue = false, waitMs = defaultWaitMs } = {} ) {
 	const logValue = secureValue === true ? '*********' : value;
 	const self = this;
