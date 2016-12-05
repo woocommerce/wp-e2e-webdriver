@@ -33,8 +33,9 @@
   },
   "homepage": "https://github.com/woocommerce/wp-e2e-webdriver",
   "dependencies": {
+    "saucelabs": "^1.2.0",
     "selenium-webdriver": "2.53.3",
-    "saucelabs": "^1.2.0"
+    "url-join": "^1.1.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",

@@ -25,10 +25,11 @@ test.describe( 'WebDriver client for chrome', () => {
 	test.before( 'Start chrome', function() {
 		this.timeout( startBrowserTimeout );
 
-		manager = new WebDriverManager( 'chrome' );
+		const baseUrl = 'https://automattic.com';
+		manager = new WebDriverManager( 'chrome', { baseUrl: baseUrl } );
 		driver = manager.getDriver();
 
-		driver.get( 'https://automattic.com/work-with-us/' );
+		driver.get( manager.getPageUrl( '/work-with-us/' ) );
 		helper.waitTillPresentAndDisplayed(
 			driver,
 			By.css( '#content' )
@@ -41,6 +42,10 @@ test.describe( 'WebDriver client for chrome', () => {
 
 	test.it( 'has https://automattic.com as the default base URL', () => {
 		assert( 'https://automattic.com' === manager.getBaseUrl() );
+	} );
+
+	test.it( 'can returns full url via manager.getPageUrl', () => {
+		assert( 'https://automattic.com/work-with-us/', manager.getPageUrl( '/work-with-us/' ) );
 	} );
 
 	test.it( 'has desktop as default screen size config', () => {

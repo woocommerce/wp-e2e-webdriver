@@ -1,6 +1,7 @@
 /**
  * External dependencies
  */
+import urljoin from 'url-join';
 import webdriver from 'selenium-webdriver';
 import proxy from 'selenium-webdriver/proxy';
 import firefox from 'selenium-webdriver/firefox';
@@ -240,5 +241,9 @@ export default class Manager {
 
 	getBaseUrl() {
 		return this.config.baseUrl;
+	}
+
+	getPageUrl( path = '/' ) {
+		return urljoin( this.getBaseUrl(), path );
 	}
 }
