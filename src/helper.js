@@ -85,3 +85,16 @@ export function setWhenSettable( driver, selector, value, { secureValue = false,
 		} );
 	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be settable to: '${ logValue }'` );
 }
+
+export function clearCookiesAndDeleteLocalStorage( driver ) {
+	driver.manage().deleteAllCookies();
+	return this.deleteLocalStorage( driver );
+}
+
+export function deleteLocalStorage( driver ) {
+	driver.getCurrentUrl().then( ( url ) => {
+		if ( url.startsWith( 'data:' ) === false && url !== 'about:blank' ) {
+			return driver.executeScript( 'window.localStorage.clear();' );
+		}
+	} );
+}
