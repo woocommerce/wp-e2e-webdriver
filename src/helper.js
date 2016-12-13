@@ -16,46 +16,26 @@ function returnTrue() {
 export function waitTillPresentAndDisplayed( driver, selector, waitMs = defaultWaitMs ) {
 	return driver.wait( function() {
 		return driver.findElement( selector ).then( function( element ) {
-			return element.isDisplayed().then( function() {
-				return true;
-			}, function() {
-				return false;
-			} );
-		}, function() {
-			return false;
-		} );
+			return element.isDisplayed().then( returnTrue, returnFalse );
+		}, returnFalse );
 	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be present and displayed` );
 }
 
 export function isEventuallyPresentAndDisplayed( driver, selector, waitMs = defaultWaitMs ) {
 	return driver.wait( function() {
 		return driver.findElement( selector ).then( function( element ) {
-			return element.isDisplayed().then( function() {
-				return true;
-			}, function() {
-				return false;
-			} );
-		}, function() {
-			return false;
-		} );
+			return element.isDisplayed().then( returnTrue, returnFalse );
+		}, returnFalse );
 	}, waitMs ).then( ( shown ) => {
 		return shown;
-	}, ( ) => {
-		return false;
-	} );
+	}, returnFalse );
 }
 
 export function clickWhenClickable( driver, selector, waitMs = defaultWaitMs ) {
 	return driver.wait( function() {
 		return driver.findElement( selector ).then( function( element ) {
-			return element.click().then( function() {
-				return true;
-			}, function() {
-				return false;
-			} );
-		}, function() {
-			return false;
-		} );
+			return element.click().then( returnTrue, returnFalse );
+		}, returnFalse );
 	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be clickable` );
 }
 
@@ -86,12 +66,8 @@ export function waitForFieldClearable( driver, selector, waitMs = defaultWaitMs 
 				return element.getAttribute( 'value' ).then( ( value ) => {
 					return value === '';
 				} );
-			}, function() {
-				return false;
-			} );
-		}, function() {
-			return false;
-		} );
+			}, returnFalse );
+		}, returnFalse );
 	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be clearable` );
 }
 
@@ -106,12 +82,8 @@ export function setWhenSettable( driver, selector, value, { secureValue = false,
 				return element.getAttribute( 'value' ).then( ( actualValue ) => {
 					return actualValue === value;
 				} );
-			}, function() {
-				return false;
-			} );
-		}, function() {
-			return false;
-		} );
+			}, returnFalse );
+		}, returnFalse );
 	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be settable to: '${ logValue }'` );
 }
 
