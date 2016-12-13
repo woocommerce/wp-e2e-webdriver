@@ -27,7 +27,7 @@ test.describe( 'WebDriverHelper', () => {
 		manager = new WebDriverManager( 'chrome' );
 		driver = manager.getDriver();
 
-		const baseUrl = 'http://localhost:8000';
+		const baseUrl = 'https://wp-e2e-test-form-page.herokuapp.com/index.html';
 		driver.get( baseUrl );
 	} );
 
