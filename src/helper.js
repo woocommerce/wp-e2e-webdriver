@@ -1,4 +1,17 @@
+/**
+ * External dependencies
+ */
+import { By } from 'selenium-webdriver';
+
 export const defaultWaitMs = 10000; // 10s
+
+function returnFalse() {
+	return false;
+}
+
+function returnTrue() {
+	return true;
+}
 
 export function waitTillPresentAndDisplayed( driver, selector, waitMs = defaultWaitMs ) {
 	return driver.wait( function() {
@@ -100,6 +113,22 @@ export function setWhenSettable( driver, selector, value, { secureValue = false,
 			return false;
 		} );
 	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be settable to: '${ logValue }'` );
+}
+
+export function selectOption( driver, dropdownSelector, optionText ) {
+	const dropdown = driver.findElement( dropdownSelector );
+
+	return dropdown.then( ( select ) => {
+		return select.click().then( () => {
+			const option = select.findElement(
+				By.xpath( `./option[contains(text(),"${ optionText }")]` )
+			);
+
+			return option.then( ( opt ) => {
+				return opt.click().then( returnTrue, returnFalse );
+			}, returnFalse );
+		}, returnFalse );
+	}, returnFalse );
 }
 
 export function clearCookiesAndDeleteLocalStorage( driver ) {
