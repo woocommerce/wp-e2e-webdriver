@@ -12,6 +12,7 @@ import test from 'selenium-webdriver/testing';
 import { WebDriverManager, WebDriverHelper as helper } from '../src/index';
 
 const startBrowserTimeout = 30000;
+const mochaTimeout = 30000;
 
 chai.use( chaiAsPromised );
 
@@ -20,7 +21,9 @@ const assert = chai.assert;
 let manager;
 let driver;
 
-test.describe( 'WebDriverHelper', () => {
+test.describe( 'WebDriverHelper', function() {
+	this.timeout( mochaTimeout );
+
 	test.before( 'Start chrome', function() {
 		this.timeout( startBrowserTimeout );
 
