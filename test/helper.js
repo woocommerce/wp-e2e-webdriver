@@ -135,7 +135,7 @@ test.describe( 'WebDriverHelper', function() {
 		);
 	} );
 
-	test.it.only( 'has function "selectOption" to select option in select element', () => {
+	test.it( 'has function "selectOption" to select option in select element', () => {
 		const simpleSelect = [
 			{ option: 'Option one', value: 'one' },
 			{ option: 'Option two', value: 'two' },
