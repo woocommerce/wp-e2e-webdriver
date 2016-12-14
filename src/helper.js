@@ -93,7 +93,7 @@ export function selectOption( driver, dropdownSelector, optionText ) {
 	return dropdown.then( ( select ) => {
 		return select.click().then( () => {
 			const option = select.findElement(
-				By.xpath( `./option[contains(text(),"${ optionText }")]` )
+				By.xpath( `.//option[contains(text(),"${ optionText }")]` )
 			);
 
 			return option.then( ( opt ) => {
