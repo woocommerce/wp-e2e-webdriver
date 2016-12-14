@@ -135,8 +135,8 @@ test.describe( 'WebDriverHelper', function() {
 		);
 	} );
 
-	test.it( 'has function "selectOption" to select option in select element', () => {
-		const expectations = [
+	test.it.only( 'has function "selectOption" to select option in select element', () => {
+		const simpleSelect = [
 			{ option: 'Option one', value: 'one' },
 			{ option: 'Option two', value: 'two' },
 			{ option: 'Option three', value: 'three' },
@@ -144,11 +144,27 @@ test.describe( 'WebDriverHelper', function() {
 			{ option: 'Option five', value: 'five' }
 		];
 
-		expectations.forEach( ( expect ) => {
+		simpleSelect.forEach( ( expect ) => {
 			helper.selectOption( driver, By.css( '#exampleSelect' ), expect.option );
 			assert.eventually.equal(
 				driver.findElement( By.css( '#exampleSelect' ) ).getAttribute( 'value' ),
 				expect.value
+			);
+		} );
+
+		const selectWithOptgroup = [
+			{ option: 'Simple product', value: 'simple' },
+			{ option: 'Grouped product', value: 'grouped' },
+			{ option: 'External/Affiliate product', value: 'external' },
+			{ option: 'Variable product', value: 'variable' }
+		];
+
+		selectWithOptgroup.forEach( ( expect ) => {
+			helper.selectOption( driver, By.css( '#exampleSelect2' ), expect.option );
+			assert.eventually.equal(
+				driver.findElement( By.css( '#exampleSelect2' ) ).getAttribute( 'value' ),
+				expect.value,
+				`Could not select option ${ expect.option } with value ${ expect.value } in #exampleSelect2`
 			);
 		} );
 	} );
