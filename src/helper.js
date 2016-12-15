@@ -31,6 +31,14 @@ export function isEventuallyPresentAndDisplayed( driver, selector, waitMs = defa
 	}, returnFalse );
 }
 
+export function waitTillNotPresent( driver, selector, waitMs = defaultWaitMs ) {
+	return driver.wait( function() {
+		return driver.findElement( selector ).then( function( element ) {
+			return element.isDisplayed().then( returnFalse, returnTrue );
+		}, returnTrue );
+	}, waitMs, `Timed out waiting for element with ${ selector.using } of '${ selector.value }' to be not present` );
+}
+
 export function clickWhenClickable( driver, selector, waitMs = defaultWaitMs ) {
 	return driver.wait( function() {
 		return driver.findElement( selector ).then( function( element ) {
