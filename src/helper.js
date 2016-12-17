@@ -49,10 +49,12 @@ export function clickWhenClickable( driver, selector, waitMs = defaultWaitMs ) {
 
 export function setCheckbox( driver, selector ) {
 	return driver.findElement( selector ).then( ( checkbox ) => {
-		checkbox.getAttribute( 'checked' ).then( ( checked ) => {
+		return checkbox.getAttribute( 'checked' ).then( ( checked ) => {
 			if ( checked !== 'true' ) {
 				return this.clickWhenClickable( driver, selector );
 			}
+
+			return true;
 		} );
 	} );
 }
