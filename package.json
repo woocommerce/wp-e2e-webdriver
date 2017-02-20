@@ -1,6 +1,6 @@
 {
   "name": "wp-e2e-webdriver",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "Webdriver manager and helper for WP end-to-end tests",
   "main": "./lib/index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "webdriver"
   ],
   "author": "WooCommerce",
-  "license": "GPL2",
+  "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/woocommerce/wp-e2e-webdriver/issues"
   },
@@ -49,7 +49,6 @@
     "cross-env": "^3.0.0",
     "eslint": "^3.11.1",
     "eslint-config-wpcalypso": "^0.6.0",
-    "eslint-plugin-import": "^2.0.0",
     "eslint-plugin-wpcalypso": "^3.0.2",
     "istanbul": "^1.0.0-alpha",
     "mocha": "^3.2.0",
