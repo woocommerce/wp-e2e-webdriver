@@ -1085,6 +1085,11 @@
       "dev": true,
       "optional": true
     },
+    "fs-extra": {
+      "version": "2.0.0",
+      "from": "fs-extra@latest",
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-2.0.0.tgz"
+    },
     "fs-readdir-recursive": {
       "version": "1.0.0",
       "from": "fs-readdir-recursive@>=1.0.0 <2.0.0",
@@ -1947,8 +1952,7 @@
     "graceful-fs": {
       "version": "4.1.11",
       "from": "graceful-fs@>=4.1.2 <5.0.0",
-      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.11.tgz",
-      "dev": true
+      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.11.tgz"
     },
     "graceful-readlink": {
       "version": "1.0.1",
@@ -2262,6 +2266,11 @@
       "from": "json5@>=0.5.0 <0.6.0",
       "resolved": "https://registry.npmjs.org/json5/-/json5-0.5.1.tgz",
       "dev": true
+    },
+    "jsonfile": {
+      "version": "2.4.0",
+      "from": "jsonfile@>=2.1.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-2.4.0.tgz"
     },
     "jsonify": {
       "version": "0.0.0",
@@ -2824,6 +2833,11 @@
       "from": "slice-ansi@0.0.4",
       "resolved": "https://registry.npmjs.org/slice-ansi/-/slice-ansi-0.0.4.tgz",
       "dev": true
+    },
+    "slugs": {
+      "version": "0.1.3",
+      "from": "slugs@>=0.1.3 <0.2.0",
+      "resolved": "https://registry.npmjs.org/slugs/-/slugs-0.1.3.tgz"
     },
     "source-map": {
       "version": "0.5.6",
