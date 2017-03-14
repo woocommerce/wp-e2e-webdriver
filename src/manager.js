@@ -7,6 +7,7 @@ import proxy from 'selenium-webdriver/proxy';
 import firefox from 'selenium-webdriver/firefox';
 import chrome from 'selenium-webdriver/chrome';
 import SauceLabs from 'saucelabs';
+import path from 'path';
 
 const implicitWait = 2000;
 const pageLoadWaitMs = 60000;
@@ -19,7 +20,8 @@ const defaultArgs = {
 	baseUrl: 'https://automattic.com',
 	resizeBrowserWindow: true,
 	useCustomUA: true,
-	proxy: 'direct'
+	proxy: 'direct',
+	screenshotsDir: path.resolve( process.cwd(), 'screenshots' )
 };
 
 export default class Manager {
@@ -243,7 +245,7 @@ export default class Manager {
 		return this.config.baseUrl;
 	}
 
-	getPageUrl( path = '/' ) {
-		return urljoin( this.getBaseUrl(), path );
+	getPageUrl( pagePath = '/' ) {
+		return urljoin( this.getBaseUrl(), pagePath );
 	}
 }
