@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-WebDriverManager.html">WebDriverManager</a><ul class='methods'><li data-type='method'><a href="module-WebDriverManager.html#getBaseUrl">getBaseUrl</a></li><li data-type='method'><a href="module-WebDriverManager.html#getConfigScreenSize">getConfigScreenSize</a></li><li data-type='method'><a href="module-WebDriverManager.html#getDriver">getDriver</a></li><li data-type='method'><a href="module-WebDriverManager.html#getPageUrl">getPageUrl</a></li><li data-type='method'><a href="module-WebDriverManager.html#getScreenSizeAsObject">getScreenSizeAsObject</a></li><li data-type='method'><a href="module-WebDriverManager.html#quitBrowser">quitBrowser</a></li><li data-type='method'><a href="module-WebDriverManager.html#resizeBrowser">resizeBrowser</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-WebDriverHelper.html">WebDriverHelper</a><ul class='methods'><li data-type='method'><a href="module-WebDriverHelper.html#.clearCookiesAndDeleteLocalStorage">clearCookiesAndDeleteLocalStorage</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.clickWhenClickable">clickWhenClickable</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.deleteLocalStorage">deleteLocalStorage</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.getMediaWithFilename">getMediaWithFilename</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.isEventuallyPresentAndDisplayed">isEventuallyPresentAndDisplayed</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.mouseMoveTo">mouseMoveTo</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.scrollDown">scrollDown</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.scrollUp">scrollUp</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.selectOption">selectOption</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.setCheckbox">setCheckbox</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.setWhenSettable">setWhenSettable</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.takeScreenshot">takeScreenshot</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.unsetCheckbox">unsetCheckbox</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.waitForFieldClearable">waitForFieldClearable</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.waitTillNotPresent">waitTillNotPresent</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.waitTillPresentAndDisplayed">waitTillPresentAndDisplayed</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.writeImage">writeImage</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.writeText">writeText</a></li></ul></li><li><a href="module-WebDriverManager.html">WebDriverManager</a><ul class='methods'><li data-type='method'><a href="module-WebDriverManager.html#getBaseUrl">getBaseUrl</a></li><li data-type='method'><a href="module-WebDriverManager.html#getConfigScreenSize">getConfigScreenSize</a></li><li data-type='method'><a href="module-WebDriverManager.html#getDriver">getDriver</a></li><li data-type='method'><a href="module-WebDriverManager.html#getPageUrl">getPageUrl</a></li><li data-type='method'><a href="module-WebDriverManager.html#getScreenSizeAsObject">getScreenSizeAsObject</a></li><li data-type='method'><a href="module-WebDriverManager.html#quitBrowser">quitBrowser</a></li><li data-type='method'><a href="module-WebDriverManager.html#resizeBrowser">resizeBrowser</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>wp-e2e-webdriver</h1><p><a href="https://www.npmjs.com/package/wp-e2e-webdriver"><img src="https://img.shields.io/npm/v/wp-e2e-webdriver.svg?style=flat" alt="npm version"></a>
+<a href="http://travis-ci.org/woocommerce/wp-e2e-webdriver"><img src="https://api.travis-ci.org/woocommerce/wp-e2e-webdriver.svg" alt="build status"></a>
+<a href="https://david-dm.org/woocommerce/wp-e2e-webdriver"><img src="https://david-dm.org/woocommerce/wp-e2e-webdriver.svg" alt="dependency status"></a></p>
+<p>Webdriver manager and helper for WordPress. Most of the good stuff were shamelessly
+copied from <a href="https://github.com/Automattic/wp-e2e-tests">wp-e2e-tests</a>. Thanks to
+wp-e2e-tests authors and contributors for providing the foundation!</p>
+<p>This package provides WebDriver manager and helper to help you test WordPress
+site.</p>
+<h2>Install</h2><pre class="prettyprint source"><code>npm install wp-e2e-webdriver</code></pre><h2>Usage</h2><pre class="prettyprint source lang-js"><code>import { WebDriverManager, WebDriverHelper } from 'wp-e2e-webdriver'
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+driver.get( 'https://automattic.com/work-with-us/' );
+helper.waitTillPresentAndDisplayed(
+    driver,
+    By.css( '#content' )
+);</code></pre><h2>Dependents</h2><p>The reason we pulled out manager and helper from wp-e2e-tests so that following
+dependents can use that:</p>
+<ul>
+<li>wp-e2e-page-objects &mdash; Repo will be published later. WordPress Page Objects
+package</li>
+<li>wc-e2e-page-objects &mdash; WooCommerce Page Objects package</li>
+<li>WooCommerce extensions that will have e2e tests that use wp-e2e-page-objects</li>
+</ul></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Mar 15 2017 04:57:28 GMT+0700 (WIB) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
