@@ -21,7 +21,8 @@ npm install wp-e2e-webdriver
 ## Usage
 
 ~~~js
-import { WebDriverManager, WebDriverHelper } from 'wp-e2e-webdriver'
+import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver'
 
 const manager = new WebDriverManager( 'chrome' );
 const driver = manager.getDriver();
@@ -38,7 +39,7 @@ helper.waitTillPresentAndDisplayed(
 The reason we pulled out manager and helper from wp-e2e-tests so that following
 dependents can use that:
 
-* wp-e2e-page-objects &mdash; Repo will be published later. WordPress Page Objects
+* [wp-e2e-page-objects](https://github.com/woocommerce/wp-e2e-page-objects) &mdash; Repo will be published later. WordPress Page Objects
   package
-* wc-e2e-page-objects &mdash; WooCommerce Page Objects package
+* [wc-e2e-page-objects](https://github.com/woocommerce/wc-e2e-page-objects) &mdash; WooCommerce Page Objects package
 * WooCommerce extensions that will have e2e tests that use wp-e2e-page-objects
