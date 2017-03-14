@@ -1,0 +1,3642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WebDriverHelper - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-WebDriverManager.html">WebDriverManager</a><ul class='methods'><li data-type='method'><a href="module-WebDriverManager.html#getBaseUrl">getBaseUrl</a></li><li data-type='method'><a href="module-WebDriverManager.html#getConfigScreenSize">getConfigScreenSize</a></li><li data-type='method'><a href="module-WebDriverManager.html#getDriver">getDriver</a></li><li data-type='method'><a href="module-WebDriverManager.html#getPageUrl">getPageUrl</a></li><li data-type='method'><a href="module-WebDriverManager.html#getScreenSizeAsObject">getScreenSizeAsObject</a></li><li data-type='method'><a href="module-WebDriverManager.html#quitBrowser">quitBrowser</a></li><li data-type='method'><a href="module-WebDriverManager.html#resizeBrowser">resizeBrowser</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-WebDriverHelper.html">WebDriverHelper</a><ul class='methods'><li data-type='method'><a href="module-WebDriverHelper.html#.clearCookiesAndDeleteLocalStorage">clearCookiesAndDeleteLocalStorage</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.clickWhenClickable">clickWhenClickable</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.deleteLocalStorage">deleteLocalStorage</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.getMediaWithFilename">getMediaWithFilename</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.isEventuallyPresentAndDisplayed">isEventuallyPresentAndDisplayed</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.mouseMoveTo">mouseMoveTo</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.scrollDown">scrollDown</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.scrollUp">scrollUp</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.selectOption">selectOption</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.setCheckbox">setCheckbox</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.setWhenSettable">setWhenSettable</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.takeScreenshot">takeScreenshot</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.unsetCheckbox">unsetCheckbox</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.waitForFieldClearable">waitForFieldClearable</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.waitTillNotPresent">waitTillNotPresent</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.waitTillPresentAndDisplayed">waitTillPresentAndDisplayed</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.writeImage">writeImage</a></li><li data-type='method'><a href="module-WebDriverHelper.html#.writeText">writeText</a></li></ul></li><li><a href="module-WebDriverManager.html">WebDriverManager</a><ul class='methods'><li data-type='method'><a href="module-WebDriverManager.html#getBaseUrl">getBaseUrl</a></li><li data-type='method'><a href="module-WebDriverManager.html#getConfigScreenSize">getConfigScreenSize</a></li><li data-type='method'><a href="module-WebDriverManager.html#getDriver">getDriver</a></li><li data-type='method'><a href="module-WebDriverManager.html#getPageUrl">getPageUrl</a></li><li data-type='method'><a href="module-WebDriverManager.html#getScreenSizeAsObject">getScreenSizeAsObject</a></li><li data-type='method'><a href="module-WebDriverManager.html#quitBrowser">quitBrowser</a></li><li data-type='method'><a href="module-WebDriverManager.html#resizeBrowser">resizeBrowser</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">WebDriverHelper</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>WebDriver helper.</p></div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".clearCookiesAndDeleteLocalStorage"><span class="type-signature">(static) </span>clearCookiesAndDeleteLocalStorage<span class="signature">(driver)</span><span class="type-signature"> &rarr; {bool}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Clear cookies and delete localStorage.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line343">line 343</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Returns true once localStorage is cleared.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">bool</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".clickWhenClickable"><span class="type-signature">(static) </span>clickWhenClickable<span class="signature">(driver, selector, waitMs)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Wait for the clickable element then click it. Timeout occurs after <code>waitMs</code>
+if clickable element located by <code>selector</code> is not present.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating an element
+                              on the page. For example <code>By.css( '#submit' )</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>waitMs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>How long to wait in millisecond. Defaults to 10000.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line152">line 152</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved with <code>true</code> if element
+                  located by <code>selector</code> is successfully clicked, <code>false</code> if
+                  element is not clickable, or rejected if times out waiting
+                  clickable element to present and displayed.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+helper.clickWhenClickable( driver, By.css( 'a.button' ) )
+  .then( ... );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".deleteLocalStorage"><span class="type-signature">(static) </span>deleteLocalStorage<span class="signature">(driver)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Empty all keys out of the <code>localStorage</code>.</p>
+<p>Under the hood invoke <code>window.localStorage.clear()</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line355">line 355</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getMediaWithFilename"><span class="type-signature">(static) </span>getMediaWithFilename<span class="signature">(filename, type)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Get path of example media where filename is <code>filename</code> and media type is <code>type</code>.</p>
+<p>This function can be used for testing file upload of various where various
+media types is allowed to be uploaded. Under the hood it copies pre-defined
+media in this package into <code>filename</code> and returns the file details.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Full path of filename where new media is going
+                           to be created.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Media type.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line508">line 508</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Promise of file details.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import path from 'path';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+helper.getMediaWithFilename( 'test-upload-image.jpg', 'jpg' ).then( data => {
+  driver.findElement( By.css( 'input[type="file"]' ) ).sendKeys( data.file );
+  helper.clickWhenClickable( driver, By.css( '#submit' ) );
+} );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".isEventuallyPresentAndDisplayed"><span class="type-signature">(static) </span>isEventuallyPresentAndDisplayed<span class="signature">(driver, selector, waitMs)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Checks whether an element located by <code>selector</code> is eventually present and displayed.
+Timeout occurs after <code>waitMs</code> if element located by <code>selector</code> is not present and
+displayed.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating an element
+                              on the page. For example <code>By.css( '#content' )</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>waitMs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>How long to wait in millisecond. Defaults to 10000.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line85">line 85</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved with <code>true</code> value if element
+                  located <code>selector</code> is eventually present and displayed, or
+                  rejected if times out waiting the element to be present
+                  and displayed.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+helper.isEventuallyPresentAndDisplayed( driver, By.css( '#content' ) )
+  .then( ... );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".mouseMoveTo"><span class="type-signature">(static) </span>mouseMoveTo<span class="signature">(driver, selector)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Mouse move into element located by <code>selector</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating an element
+                              on the page. For example <code>By.css( 'input[name=&quot;username&quot;]' )</code>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line401">line 401</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved to <code>true</code> if mouse can
+                  be moved to the element located by <code>selector</code>, <code>false</code>
+                  if can not be moved.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+const selector = By.css( '#submit' );
+
+helper.mouseMoveTo( driver, selector ).then( () => {
+  helper.clickWhenClickable( driver, selector );
+} );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".scrollDown"><span class="type-signature">(static) </span>scrollDown<span class="signature">(driver, waitMs)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Scroll down once by pressing page down key.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>waitMs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Sleep for <code>waitMs</code> after pressing page down.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line417">line 417</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".scrollUp"><span class="type-signature">(static) </span>scrollUp<span class="signature">(driver, waitMs)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Scroll up once by pressing page up key.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>waitMs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Sleep for <code>waitMs</code> after pressing page up.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line369">line 369</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".selectOption"><span class="type-signature">(static) </span>selectOption<span class="signature">(driver, dropdownSelector, optionText)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Select option with text <code>optionText</code> in select element lcoated by <code>dropdownSelector</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dropdownSelector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating
+                                      an element on the page. For example
+                                      <code>By.css( 'select[name=&quot;country&quot;]' )</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>optionText</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Option text.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line320">line 320</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved to <code>true</code> if option can
+                  be selected, or <code>false</code> if not.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".setCheckbox"><span class="type-signature">(static) </span>setCheckbox<span class="signature">(driver, selector)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Check the checkbox element located by <code>selector</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating an element
+                              on the page. For example <code>By.css( 'input[type=&quot;checkbox&quot;]' )</code>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line181">line 181</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved with <code>true</code> if checkbox
+                  element located by <code>selector</code> is checked.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+helper.setCheckbox( driver, By.css( 'input[type="checkbox"]' ) )
+  .then( ... );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".setWhenSettable"><span class="type-signature">(static) </span>setWhenSettable<span class="signature">(driver, selector, value, options)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Set the element's value, located by <code>selector</code>, with <code>value</code>. Timeout occurs
+after <code>waitMs</code> if the element located by <code>selector</code> is not present and displayed.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating an element
+                              on the page. For example <code>By.css( 'input[name=&quot;username&quot;]' )</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Value to set to the element.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">objec</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional object where <code>secureValue</code> is a boolea
+                              indicating the element's value shouldn't be exposed
+                              in the log ( e.g input[type=&quot;password&quot;] ), <code>waitMs</code>
+                              is time in millisecond to wait for the element
+                              to be settable.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line292">line 292</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved with <code>true</code> if element's value,
+                  located by <code>selector</code>, is successfully set, <code>false</code> if
+                  element's value is not set, or rejected if times out waiting
+                  the element to present and displayed.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+helper.setWhenSettable( driver, By.css( 'input[name="username"]' ) )
+  .then( ... );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".takeScreenshot"><span class="type-signature">(static) </span>takeScreenshot<span class="signature">(manager, currentTest)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Take a screenshot from <code>currentTest</code>.</p>
+<p>The best place to use this is in <code>test.afterEach</code> hook where all tests
+are captured.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>manager</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriverManager</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of <code>WebDriverManager</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>currentTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Current test.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line549">line 549</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved with <code>undefined</code> once
+                  screenshot is written to <code>manager.config.screenshotsDir</code>.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import test from 'selenium-webdriver/testing';
+import { WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+test.afterEach( 'Take screenshot', function() {
+  return helper.takeScreenshot( global.__MANAGER__, this.currentTest );
+} );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".unsetCheckbox"><span class="type-signature">(static) </span>unsetCheckbox<span class="signature">(driver, selector)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Uncheck the checkbox element located by <code>selector</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating an element
+                              on the page. For example <code>By.css( 'input[type=&quot;checkbox&quot;]' )</code>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line214">line 214</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved with <code>true</code> if checkbox
+                  element located by <code>selector</code> is unchecked.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+helper.unsetCheckbox( driver, By.css( 'input[type="checkbox"]' ) )
+  .then( ... );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".waitForFieldClearable"><span class="type-signature">(static) </span>waitForFieldClearable<span class="signature">(driver, selector, waitMs)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Wait for the element value is cleared. Timeout occurs after <code>waitMs</code> if
+the element located by <code>selector</code> is not present and displayed.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating an element
+                              on the page. For example <code>By.css( 'input[name=&quot;username&quot;]' )</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>waitMs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>How long to wait in millisecond. Defaults to 10000.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line249">line 249</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved with <code>true</code> if element's value,
+                  located by <code>selector</code>, is successfully cleared, <code>false</code> if
+                  element's value is not cleared, or rejected if times out waiting
+                  the element to present and displayed.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+helper.waitForFieldClearable( driver, By.css( 'input[name="username"]' ) )
+  .then( ... );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".waitTillNotPresent"><span class="type-signature">(static) </span>waitTillNotPresent<span class="signature">(driver, selector, waitMs)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Wait for element, located by <code>selector</code>, until not present. Timeout occurs
+after <code>waitMs</code> if element located by <code>selector</code> still present.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating an element
+                              on the page. For example <code>By.css( '#content' )</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>waitMs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>How long to wait in millisecond. Defaults to 10000.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line119">line 119</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved with <code>true</code> value if element
+                  located <code>selector</code> is eventually not present, or rejected
+                  if times out waiting the element to be not present.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+helper.waitTillNotPresent( driver, By.css( '#content' ) )
+  .then( ... );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".waitTillPresentAndDisplayed"><span class="type-signature">(static) </span>waitTillPresentAndDisplayed<span class="signature">(driver, selector, waitMs)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Wait for element, located by <code>selector</code>, until present and displayed. Timeout
+occurs after <code>waitMs</code> if element located by <code>selector</code> is not present and
+displayed.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>driver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebDriver</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of WebDriver.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of locator, mechanism for locating an element
+                              on the page. For example <code>By.css( '#content' )</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>waitMs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>How long to wait in millisecond. Defaults to 10000.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line51">line 51</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A promise that will be resolved with <code>true</code> value if element
+                  located <code>selector</code> is present and displayed, or rejected if
+                  times out waiting element to present and displayed.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { By } from 'selenium-webdriver';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+helper.waitTillPresentAndDisplayed( driver, By.css( '#content' ) )
+  .then( ... );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".writeImage"><span class="type-signature">(static) </span>writeImage<span class="signature">(data, dst)</span><span class="type-signature"> &rarr; {unefined}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Write image <code>data</code> to <code>dst</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Buffer</span>
+|
+
+<span class="param-type">Uint8Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Date to write.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dst</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">dst</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Path of the file where data being
+                                         written into.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line447">line 447</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Returns value from <code>fs.writeFileSync</code> which is <code>undefined</code>.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">unefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import path from 'path';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+
+driver.takeScreenshot().then( data => {
+  const dst = path.resolve( manager.config.screenshotsDir, 'screenshot.png' );
+  helper.writeImage( data, dst );
+} );</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".writeText"><span class="type-signature">(static) </span>writeText<span class="signature">(content, dst)</span><span class="type-signature"> &rarr; {unefined}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Write text <code>data</code> to <code>dst</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Buffer</span>
+|
+
+<span class="param-type">Uint8Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Date to write.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dst</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">dst</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Path of the file where data being
+                                            written into.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helper.js.html">helper.js</a>, <a href="helper.js.html#line476">line 476</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Returns value from <code>fs.writeFileSync</code> which is <code>undefined</code>.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">unefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import path from 'path';
+import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver';
+
+const manager = new WebDriverManager( 'chrome' );
+const driver = manager.getDriver();
+const dst = path.resolve( process.cwd(), 'browser-log.txt' );
+
+driver.manage().logs().get( 'browser' ).then( logs => {
+  logs.forEach( log => {
+    helper.writeText( log.message, dst );
+  } );
+} );</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Mar 15 2017 04:57:28 GMT+0700 (WIB) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
