@@ -1,6 +1,10 @@
 wp-e2e-webdriver
 ================
 
+[![npm version](https://img.shields.io/npm/v/wp-e2e-webdriver.svg?style=flat)](https://www.npmjs.com/package/wp-e2e-webdriver)
+[![build status](https://api.travis-ci.org/woocommerce/wp-e2e-webdriver.svg)](http://travis-ci.org/woocommerce/wp-e2e-webdriver)
+[![dependency status](https://david-dm.org/woocommerce/wp-e2e-webdriver.svg)](https://david-dm.org/woocommerce/wp-e2e-webdriver)
+
 Webdriver manager and helper for WordPress. Most of the good stuff were shamelessly
 copied from [wp-e2e-tests](https://github.com/Automattic/wp-e2e-tests). Thanks to
 wp-e2e-tests authors and contributors for providing the foundation!
