@@ -9,30 +9,30 @@ import test from 'selenium-webdriver/testing';
 /**
  * Internal dependencies
  */
-import { WebDriverManager, WebDriverHelper as helper } from '../src/index';
-
-const startBrowserTimeout = 30000;
+import { WebDriverHelper as helper } from '../src/index';
 
 chai.use( chaiAsPromised );
 
 const assert = chai.assert;
 const expect = chai.expect;
+const mochaTimeout = 30000;
 
 let manager;
 let driver;
 
-test.describe( 'WebDriver client for chrome', () => {
-	test.before( 'Start chrome', function() {
-		this.timeout( startBrowserTimeout );
+test.describe( 'WebDriverManager', function() {
+	this.timeout( mochaTimeout );
 
-		const baseUrl = 'https://automattic.com';
-		manager = new WebDriverManager( 'chrome', { baseUrl: baseUrl } );
-		driver = manager.getDriver();
+	test.before( 'Set baseUrl and try getPageUrl', function() {
+		manager = global.__MANAGER__;
+		driver = global.__DRIVER__;
 
-		driver.get( manager.getPageUrl( '/work-with-us/' ) );
+		manager.config.baseUrl = 'https://wp-e2e-test-form-page.herokuapp.com';
+		driver.get( manager.getPageUrl( '/page-path/' ) );
+
 		helper.waitTillPresentAndDisplayed(
 			driver,
-			By.css( '#content' )
+			By.css( 'body' )
 		);
 	} );
 
@@ -40,12 +40,12 @@ test.describe( 'WebDriver client for chrome', () => {
 		assert( driver instanceof WebDriver );
 	} );
 
-	test.it( 'has https://automattic.com as the default base URL', () => {
-		assert( 'https://automattic.com' === manager.getBaseUrl() );
+	test.it( 'has https://wp-e2e-test-form-page.herokuapp.com/ as the default base URL', () => {
+		assert( 'https://wp-e2e-test-form-page.herokuapp.com' === manager.getBaseUrl() );
 	} );
 
 	test.it( 'can returns full url via manager.getPageUrl', () => {
-		assert( 'https://automattic.com/work-with-us/', manager.getPageUrl( '/work-with-us/' ) );
+		assert( 'https://wp-e2e-test-form-page.herokuapp.com/page-path/', manager.getPageUrl( '/page-path/' ) );
 	} );
 
 	test.it( 'has desktop as default screen size config', () => {
@@ -83,14 +83,10 @@ test.describe( 'WebDriver client for chrome', () => {
 		} );
 	} );
 
-	test.it( 'just visited https://automattic.com/work-with-us/', () => {
+	test.it( 'just visited https://wp-e2e-test-form-page.herokuapp.com/page-path/', () => {
 		return assert.eventually.equal(
 			driver.getCurrentUrl(),
-			'https://automattic.com/work-with-us/'
+			'https://wp-e2e-test-form-page.herokuapp.com/page-path/'
 		);
-	} );
-
-	test.after( () => {
-		manager.quitBrowser();
 	} );
 } );

@@ -3,35 +3,28 @@
  */
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import { By } from 'selenium-webdriver';
+import { By, until } from 'selenium-webdriver';
 import test from 'selenium-webdriver/testing';
 
 /**
  * Internal dependencies
  */
-import { WebDriverManager, WebDriverHelper as helper } from '../src/index';
+import { WebDriverHelper as helper } from '../src/index';
 
-const startBrowserTimeout = 30000;
 const mochaTimeout = 30000;
 
 chai.use( chaiAsPromised );
 
 const assert = chai.assert;
 
-let manager;
 let driver;
 
 test.describe( 'WebDriverHelper', function() {
 	this.timeout( mochaTimeout );
 
-	test.before( 'Start chrome', function() {
-		this.timeout( startBrowserTimeout );
-
-		manager = new WebDriverManager( 'chrome' );
-		driver = manager.getDriver();
-
-		const baseUrl = 'https://wp-e2e-test-form-page.herokuapp.com/index.html';
-		driver.get( baseUrl );
+	test.before( 'Open wp-e2e-test-form-page.herokuapp.com', function() {
+		driver = global.__DRIVER__;
+		driver.get( 'https://wp-e2e-test-form-page.herokuapp.com/index.html' );
 	} );
 
 	test.it( 'has function "waitTillPresentAndDisplayed" to wait until element is present and displayed', () => {
@@ -169,7 +162,43 @@ test.describe( 'WebDriverHelper', function() {
 		} );
 	} );
 
-	test.after( () => {
-		manager.quitBrowser();
+	test.describe( 'upload files', () => {
+		const waitLocated = 15000;
+		const uploadInput = By.css( 'input[type="file"]' );
+		const submit = By.css( '#submit' );
+		const uploadedImg = By.css( 'img' );
+		const uploadedAudio = By.css( 'audio' );
+
+		let fileDetails;
+
+		test.before( 'open wp-e2e-test-form-page.herokuapp.com/upload/', () => {
+			driver.get( 'https://wp-e2e-test-form-page.herokuapp.com/upload/' );
+		} );
+
+		test.it( 'prepare image to upload', () => {
+			helper.getMediaWithFilename( 'test-image.jpg', 'jpg' ).then( data => {
+				fileDetails = data;
+			} );
+		} );
+
+		test.it( 'can upload image file', () => {
+			driver.wait( until.elementLocated( uploadInput ), waitLocated, 'Could not locate upload input' );
+			driver.findElement( uploadInput ).sendKeys( fileDetails.file );
+			helper.clickWhenClickable( driver, submit );
+			driver.wait( until.elementLocated( uploadedImg ), waitLocated, 'Could not located uploaded image' );
+		} );
+
+		test.it( 'prepare audio to upload', () => {
+			helper.getMediaWithFilename( 'test-audio.mp3', 'mp3' ).then( data => {
+				fileDetails = data;
+			} );
+		} );
+
+		test.it( 'can upload mp3 file', () => {
+			driver.wait( until.elementLocated( uploadInput ), waitLocated, 'Could not locate upload input' );
+			driver.findElement( uploadInput ).sendKeys( fileDetails.file );
+			helper.clickWhenClickable( driver, submit );
+			driver.wait( until.elementLocated( uploadedAudio ), waitLocated, 'Could not located uploaded audio' );
+		} );
 	} );
 } );
