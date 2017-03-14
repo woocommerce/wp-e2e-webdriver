@@ -1,7 +1,11 @@
 /**
  * External dependencies
  */
-import { By, Key } from 'selenium-webdriver';
+import { By, Key, promise } from 'selenium-webdriver';
+import fs from 'fs-extra';
+import path from 'path';
+import slug from 'slugs';
+import temp from 'temp';
 
 export const defaultWaitMs = 10000; // 10s
 
@@ -150,4 +154,51 @@ export function scrollDown( driver, waitMsToScroll = 2000 ) {
 		perform();
 
 	driver.sleep( waitMsToScroll );
+}
+
+export function writeImage( data, dst ) {
+	fs.ensureFileSync( dst );
+	return fs.writeFileSync( dst, data, 'base64' );
+}
+
+export function writeText( content, dst ) {
+	fs.ensureFileSync( dst );
+	return fs.writeFileSync( dst, content );
+}
+
+export function getMediaWithFilename( filename, type = 'jpg' ) {
+	const src = path.resolve( __dirname, `../media/media.${ type }` );
+	if ( ! fs.existsSync( src ) ) {
+		throw new Error( `Source media ${ src } does not exist` );
+	}
+
+	const dst = path.resolve( temp.mkdirSync( 'media' ), filename );
+	const d = promise.defer();
+
+	fs.copySync( src, dst );
+
+	d.fulfill( {
+		imageName: filename,
+		fileName: filename,
+		file: dst
+	} );
+
+	return d.promise;
+}
+
+export function takeScreenshot( manager, currentTest ) {
+	if ( ! currentTest ) {
+		return;
+	}
+
+	const driver = manager.getDriver();
+	const title = slug( currentTest.title );
+	const state = currentTest.state;
+	const screenSize = manager.getConfigScreenSize();
+	const filename = `${ state }-${ screenSize }-${ title }.png`;
+
+	return driver.takeScreenshot().then( data => {
+		const dst = path.resolve( manager.config.screenshotsDir, filename );
+		writeImage( data, dst );
+	} );
 }
