@@ -34,6 +34,10 @@ helper.waitTillPresentAndDisplayed(
 );
 ~~~
 
+## Docs
+
+Latest API doc is available [here](https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.10.0/).
+
 ## Dependents
 
 The reason we pulled out manager and helper from wp-e2e-tests so that following
