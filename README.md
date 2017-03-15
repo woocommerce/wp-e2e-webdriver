@@ -58,4 +58,4 @@ dependents can use that:
 * [wp-e2e-page-objects](https://github.com/woocommerce/wp-e2e-page-objects) &mdash; Repo will be published later. WordPress Page Objects
   package
 * [wc-e2e-page-objects](https://github.com/woocommerce/wc-e2e-page-objects) &mdash; WooCommerce Page Objects package
-* WooCommerce extensions that will have e2e tests that use wp-e2e-page-objects
+* WordPress plugin or WooCommerce extensions that will have e2e tests that use wp-e2e-page-objects or wc-e2e-page-objects.
