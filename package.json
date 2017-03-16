@@ -10,7 +10,7 @@
     "cover": "cross-env BABEL_ENV=commonjs istanbul cover _mocha -- --compilers js:babel-register --recursive",
     "lint": "eslint src test",
     "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
-    "docs:generate": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
+    "docs:generate": "node_modules/.bin/jsdoc --configure .jsdoc.json --tutorials docs/tutorials --verbose",
     "pre-publish": "npm run clean && npm run lint && npm run test && npm run build",
     "preversion": "npm run clean && npm run lint && npm run test",
     "version": "npm run build && git add -A .",

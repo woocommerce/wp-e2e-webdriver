@@ -1,0 +1,21 @@
+{
+  "overview": {
+    "title": "Overview"
+  },
+  "quick-start": {
+    "title": "Quick start"
+  },
+  "writing-end-to-end-test": {
+    "title": "Writing e2e tests",
+    "children": ["testing-a-site", "page-objects", "testing-a-wordpress-site"]
+  },
+  "testing-a-site": {
+    "title": "Testing a site"
+  },
+  "page-objects": {
+    "title": "Page Objects"
+  },
+  "testing-a-wordpress-site": {
+    "title": "Testing a WordPress site"
+  }
+}

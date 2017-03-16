@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>Tutorial: Writing e2e tests - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,68 +28,30 @@
 
 <div id="main">
     
-
+    <h1 class="page-title">Tutorial: Writing e2e tests</h1>
     
 
+    <section>
 
-
+<header>
+    
+    <ul>
+        <li><a href="tutorial-testing-a-site.html">Testing a site</a></li>
+    
+        <li><a href="tutorial-page-objects.html">Page Objects</a></li>
+    
+        <li><a href="tutorial-testing-a-wordpress-site.html">Testing a WordPress site</a></li>
+    </ul>
     
 
+    <h2>Writing e2e tests</h2>
+</header>
 
+<article>
+    <p>WIP</p>
+</article>
 
-
-
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>wp-e2e-webdriver</h1><p><a href="https://www.npmjs.com/package/wp-e2e-webdriver"><img src="https://img.shields.io/npm/v/wp-e2e-webdriver.svg?style=flat" alt="npm version"></a>
-<a href="http://travis-ci.org/woocommerce/wp-e2e-webdriver"><img src="https://api.travis-ci.org/woocommerce/wp-e2e-webdriver.svg" alt="build status"></a>
-<a href="https://david-dm.org/woocommerce/wp-e2e-webdriver"><img src="https://david-dm.org/woocommerce/wp-e2e-webdriver.svg" alt="dependency status"></a></p>
-<p>Webdriver manager and helper for WordPress. Most of the good stuff were shamelessly
-copied from <a href="https://github.com/Automattic/wp-e2e-tests">wp-e2e-tests</a>. Thanks to
-wp-e2e-tests authors and contributors for providing the foundation!</p>
-<p>This package provides WebDriver manager and helper to help you test WordPress
-site.</p>
-<h2>Prerequisites</h2><ul>
-<li><code>chromedriver</code>
-which can be downloaded from <a href="https://chromedriver.storage.googleapis.com/index.html?path=2.25/">here</a>.
-Make sure <code>chromedriver</code> is available in your <code>$PATH</code>. This package is tested
-with version 2.25 and it's recommended to use that version. From our experience
-each version has different behaviours and outcomes. Tests for this package
-are written using <code>chromedriver</code>.</li>
-</ul>
-<p>You can optionally install other drivers such as <a href="https://github.com/mozilla/geckodriver">geckodriver</a>
-or use remote webdriver via <a href="https://saucelabs.com/">Sauce Labs</a>.</p>
-<h2>Install</h2><pre class="prettyprint source"><code>npm install wp-e2e-webdriver</code></pre><h2>Usage</h2><pre class="prettyprint source lang-js"><code>import { By } from 'selenium-webdriver';
-import { WebDriverManager, WebDriverHelper as helper } from 'wp-e2e-webdriver'
-
-const manager = new WebDriverManager( 'chrome' );
-const driver = manager.getDriver();
-
-driver.get( 'https://automattic.com/work-with-us/' );
-helper.waitTillPresentAndDisplayed(
-    driver,
-    By.css( '#content' )
-);</code></pre><h2>Docs</h2><p>Latest API doc is available <a href="https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.10.0/">here</a>.</p>
-<h2>Dependents</h2><p>The reason we pulled out manager and helper from wp-e2e-tests so that following
-dependents can use that:</p>
-<ul>
-<li><a href="https://github.com/woocommerce/wp-e2e-page-objects">wp-e2e-page-objects</a> &mdash; Repo will be published later. WordPress Page Objects
-package</li>
-<li><a href="https://github.com/woocommerce/wc-e2e-page-objects">wc-e2e-page-objects</a> &mdash; WooCommerce Page Objects package</li>
-<li>WordPress plugin or WooCommerce extensions that will have e2e tests that use wp-e2e-page-objects or wc-e2e-page-objects.</li>
-</ul></article>
-    </section>
-
-
-
-
-
+</section>
 
 </div>
 
