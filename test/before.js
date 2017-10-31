@@ -6,7 +6,8 @@ import { WebDriverManager } from '../src/index';
 
 const startBrowserTimeout = 30000;
 
-test.before( 'Set manager and driver', function() {
+// Set manager and driver
+test.before( function() {
 	this.timeout( startBrowserTimeout );
 
 	global.__MANAGER__ = new WebDriverManager( 'chrome' );

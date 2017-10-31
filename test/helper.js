@@ -22,7 +22,8 @@ let driver;
 test.describe( 'WebDriverHelper', function() {
 	this.timeout( mochaTimeout );
 
-	test.before( 'Open wp-e2e-test-form-page.herokuapp.com', function() {
+	// Open wp-e2e-test-form-page.herokuapp.com
+	test.before( function() {
 		driver = global.__DRIVER__;
 		driver.get( 'https://wp-e2e-test-form-page.herokuapp.com/index.html' );
 	} );
@@ -171,7 +172,8 @@ test.describe( 'WebDriverHelper', function() {
 
 		let fileDetails;
 
-		test.before( 'open wp-e2e-test-form-page.herokuapp.com/upload/', () => {
+		// open wp-e2e-test-form-page.herokuapp.com/upload/
+		test.before( () => {
 			driver.get( 'https://wp-e2e-test-form-page.herokuapp.com/upload/' );
 		} );
 

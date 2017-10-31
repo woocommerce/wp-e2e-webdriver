@@ -23,7 +23,8 @@ let driver;
 test.describe( 'WebDriverManager', function() {
 	this.timeout( mochaTimeout );
 
-	test.before( 'Set baseUrl and try getPageUrl', function() {
+	// Set baseUrl and try getPageUrl
+	test.before( function() {
 		manager = global.__MANAGER__;
 		driver = global.__DRIVER__;
 
