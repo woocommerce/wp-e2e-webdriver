@@ -214,7 +214,7 @@ export default class Manager {
 	getScreenSizeAsObject( screenSize ) {
 		switch ( screenSize ) {
 			case 'mobile':
-				return { width: 400, height: 1000 };
+				return { width: 415, height: 1000 };
 			case 'tablet':
 				return { width: 1024, height: 1000 };
 			case 'desktop':
@@ -238,7 +238,7 @@ export default class Manager {
 		if ( typeof ( screenSize ) === 'string' ) {
 			switch ( screenSize.toLowerCase() ) {
 				case 'mobile':
-					this.driver.manage().window().setSize( 400, 1000 );
+					this.driver.manage().window().setSize( 415, 1000 );
 					break;
 				case 'tablet':
 					this.driver.manage().window().setSize( 1024, 1000 );
