@@ -27,7 +27,8 @@ const defaultArgs = {
 	resizeBrowserWindow: true,
 	useCustomUA: true,
 	proxy: 'direct',
-	screenshotsDir: path.resolve( process.cwd(), 'screenshots' )
+	screenshotsDir: path.resolve( process.cwd(), 'screenshots' ),
+	headless: false
 };
 
 /**
@@ -146,6 +147,9 @@ export default class Manager {
 		const options = new chrome.Options();
 		options.setProxy( this.getProxyType() );
 		options.addArguments( '--no-sandbox' );
+		if ( process.env.HEADLESS || this.config.headless ) {
+			options.addArguments( '--headless' );
+		}
 		if ( this.config.useCustomUA ) {
 			options.addArguments( 'user-agent=' + chromeUA );
 		}
