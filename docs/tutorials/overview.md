@@ -57,7 +57,7 @@ helper.clickWhenClickable( driver, By.name( 'btnG' ) );
 manager.quitBrowser();
 ~~~
 
-Lots of good stuff in helper and manager comes form [`wp-e2e-tests`](https://github.com/Automattic/wp-e2e-tests)
+Lots of good stuff in helper and manager comes from [`wp-e2e-tests`](https://github.com/Automattic/wp-e2e-tests)
 written by good folks at [Automattic](https://automattic.com/) to test [WordPress.com](https://wordpress.com/).
 
 ## Next
