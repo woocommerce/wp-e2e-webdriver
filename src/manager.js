@@ -9,7 +9,7 @@
  */
 import urljoin from 'url-join';
 import webdriver from 'selenium-webdriver';
-import chromedriver from 'chromedriver';
+import chromedriver from 'chromedriver'; // eslint-disable-line no-unused-vars
 import proxy from 'selenium-webdriver/proxy';
 import firefox from 'selenium-webdriver/firefox';
 import chrome from 'selenium-webdriver/chrome';
