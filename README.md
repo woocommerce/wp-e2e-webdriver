@@ -12,16 +12,8 @@ wp-e2e-tests authors and contributors for providing the foundation!
 This package provides WebDriver manager and helper to help you test WordPress
 site.
 
-## Prerequisites
-
-* `chromedriver`
-  which can be downloaded from [here](https://chromedriver.storage.googleapis.com/index.html?path=2.25/).
-  Make sure `chromedriver` is available in your `$PATH`. This package is tested
-  with version 2.25 and it's recommended to use that version. From our experience
-  each version has different behaviours and outcomes. Tests for this package
-  are written using `chromedriver`.
-
-You can optionally install other drivers such as [geckodriver](https://github.com/mozilla/geckodriver)
+By default, this package uses [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/),
+but you can optionally install other drivers such as [geckodriver](https://github.com/mozilla/geckodriver)
 or use remote webdriver via [Sauce Labs](https://saucelabs.com/).
 
 ## Install

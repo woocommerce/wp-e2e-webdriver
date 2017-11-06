@@ -9,6 +9,7 @@
  */
 import urljoin from 'url-join';
 import webdriver from 'selenium-webdriver';
+import chromedriver from 'chromedriver';
 import proxy from 'selenium-webdriver/proxy';
 import firefox from 'selenium-webdriver/firefox';
 import chrome from 'selenium-webdriver/chrome';
