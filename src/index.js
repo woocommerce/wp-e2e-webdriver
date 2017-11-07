@@ -6,5 +6,5 @@ import Manager from './manager';
 
 export {
 	WebDriverHelper,
-	Manager as WebDriverManager
+	Manager as WebDriverManager,
 };
