@@ -36,6 +36,7 @@ as an example a test should be written.
 Make sure to bump the version, for example to bump minor version:
 
 ```
+$ git checkout master
 $ npm version minor
 ```
 
