@@ -55,3 +55,5 @@ We use [JSDoc](http://usejsdoc.org/) to generate for API documentation and [tuto
 ```
 $ npm run docs:generate
 ```
+
+After generating the documentation for a new version, remember to update the two links in the README.md file.
