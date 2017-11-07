@@ -3,9 +3,6 @@ with all the tools you need.
 
 ## Before you begin
 
-* Make sure you have `chromedriver` installed and available in your `$PATH`,
-  try `chromedriver --version` and if installed, it should gives you the version
-  of installed `chromedriver`.
 * Install `wp-e2e-webdriver`:
 
   ```
