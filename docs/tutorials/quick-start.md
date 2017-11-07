@@ -54,3 +54,20 @@ $ ./node_modules/.bin/babel-node --presets es2015 index.js
 ```
 
 ![Demo running the code](../../tutorials/quickstart.gif)
+
+### Running the code headlessly
+    
+By default the tests start their own Selenium server in the background, which in turn launches a Chrome browser on your desktop where you can watch the tests execute. This can be a bit of a headache if you're trying to do other work while the tests are running, as the browser may occasionally steal focus back.
+    
+The easiest way to run "headlessly", without a visible browser window, is using the HEADLESS=1 environment variable which will run Chrome with the --headless flag.
+
+```
+$ export HEADLESS=1
+$ ./node_modules/.bin/babel-node --presets es2015 index.js
+```
+
+Alternatively, you can pass a configuration when instantiating the `WebDriverManager` class:
+
+~~~js
+const manager = new WebDriverManager( 'chrome', { headless: true } );
+~~~

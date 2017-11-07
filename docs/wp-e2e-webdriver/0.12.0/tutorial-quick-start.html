@@ -70,6 +70,11 @@ setTimeout( () => {
 }, 5000 );</code></pre><p>The 5 seconds wait is just to show you whether an input is filled and the checkbox
 is checked.</p>
 <h2>Running the code</h2><pre class="prettyprint source"><code>$ ./node_modules/.bin/babel-node --presets es2015 index.js</code></pre><p><img src="../../tutorials/quickstart.gif" alt="Demo running the code"></p>
+<h3>Running the code headlessly</h3><p>By default the tests start their own Selenium server in the background, which in turn launches a Chrome browser on your desktop where you can watch the tests execute. This can be a bit of a headache if you're trying to do other work while the tests are running, as the browser may occasionally steal focus back.</p>
+<p>The easiest way to run &quot;headlessly&quot;, without a visible browser window, is using the HEADLESS=1 environment variable which will run Chrome with the --headless flag.</p>
+<pre class="prettyprint source"><code>$ export HEADLESS=1
+$ ./node_modules/.bin/babel-node --presets es2015 index.js</code></pre><p>Alternatively, you can pass a configuration when instantiating the <code>WebDriverManager</code> class:</p>
+<pre class="prettyprint source lang-js"><code>const manager = new WebDriverManager( 'chrome', { headless: true } );</code></pre>
 </article>
 
 </section>
