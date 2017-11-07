@@ -40,8 +40,8 @@ helper.waitTillPresentAndDisplayed(
 
 ## Docs
 
-* [Tutorials](https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.10.0/tutorial-overview.html)
-* [API docs](https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.10.0/)
+* [Tutorials](https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.12.0/tutorial-overview.html)
+* [API docs](https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.12.0/)
 * [Contributing](./.github/CONTRIBUTING.md)
 
 ## Dependents
