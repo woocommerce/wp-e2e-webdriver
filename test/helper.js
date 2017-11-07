@@ -61,7 +61,7 @@ test.describe( 'WebDriverHelper', function() {
 			'#exampleCheckbox',
 			'#inlineCheckbox1',
 			'#inlineCheckbox2',
-			'#inlineCheckbox3'
+			'#inlineCheckbox3',
 		];
 
 		checkboxes.forEach( ( cssSelector ) => {
@@ -79,7 +79,7 @@ test.describe( 'WebDriverHelper', function() {
 			'#exampleCheckbox',
 			'#inlineCheckbox1',
 			'#inlineCheckbox2',
-			'#inlineCheckbox3'
+			'#inlineCheckbox3',
 		];
 
 		checkboxes.forEach( ( cssSelector ) => {
@@ -95,7 +95,7 @@ test.describe( 'WebDriverHelper', function() {
 	test.it( 'has function "setWhenSettable" to set or fill input element with a value', () => {
 		const textFields = [
 			'#exampleInputEmail1',
-			'#exampleInputPassword1'
+			'#exampleInputPassword1',
 		];
 
 		textFields.forEach( ( cssSelector ) => {
@@ -135,7 +135,7 @@ test.describe( 'WebDriverHelper', function() {
 			{ option: 'Option two', value: 'two' },
 			{ option: 'Option three', value: 'three' },
 			{ option: 'Option four', value: 'four' },
-			{ option: 'Option five', value: 'five' }
+			{ option: 'Option five', value: 'five' },
 		];
 
 		simpleSelect.forEach( ( expect ) => {
@@ -150,7 +150,7 @@ test.describe( 'WebDriverHelper', function() {
 			{ option: 'Simple product', value: 'simple' },
 			{ option: 'Grouped product', value: 'grouped' },
 			{ option: 'External/Affiliate product', value: 'external' },
-			{ option: 'Variable product', value: 'variable' }
+			{ option: 'Variable product', value: 'variable' },
 		];
 
 		selectWithOptgroup.forEach( ( expect ) => {

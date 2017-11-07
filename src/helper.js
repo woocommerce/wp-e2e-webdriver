@@ -519,7 +519,7 @@ export function getMediaWithFilename( filename, type = 'jpg' ) {
 	d.fulfill( {
 		imageName: filename,
 		fileName: filename,
-		file: dst
+		file: dst,
 	} );
 
 	return d.promise;

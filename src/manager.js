@@ -29,7 +29,7 @@ const defaultArgs = {
 	useCustomUA: true,
 	proxy: 'direct',
 	screenshotsDir: path.resolve( process.cwd(), 'screenshots' ),
-	headless: false
+	headless: false,
 };
 
 /**
@@ -82,7 +82,7 @@ export default class Manager {
 					throw new Error(
 						`The specified browser: '${ browserName }' in the config` +
 						'is not supported. Supported browsers are "chrome" and "firefox"'
-				);
+					);
 			}
 
 			this.browserName = browserName;
@@ -116,7 +116,7 @@ export default class Manager {
 
 		global._sauceLabs = new SauceLabs( {
 			username: caps.username,
-			password: caps.accessKey
+			password: caps.accessKey,
 		} );
 
 		const builder = new webdriver.Builder();
