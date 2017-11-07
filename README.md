@@ -40,8 +40,8 @@ helper.waitTillPresentAndDisplayed(
 
 ## Docs
 
-* [Tutorials](https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.10.0/tutorial-overview.html)
-* [API docs](https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.10.0/)
+* [Tutorials](https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.11.0/tutorial-overview.html)
+* [API docs](https://woocommerce.github.io/wp-e2e-webdriver/wp-e2e-webdriver/0.11.0/)
 * [Contributing](./.github/CONTRIBUTING.md)
 
 ## Dependents
@@ -49,7 +49,7 @@ helper.waitTillPresentAndDisplayed(
 The reason we pulled out manager and helper from wp-e2e-tests so that following
 dependents can use that:
 
-* [wp-e2e-page-objects](https://github.com/woocommerce/wp-e2e-page-objects) &mdash; Repo will be published later. WordPress Page Objects
+* [wp-e2e-page-objects](https://github.com/woocommerce/wp-e2e-page-objects) &mdash; WordPress Page Objects
   package
 * [wc-e2e-page-objects](https://github.com/woocommerce/wc-e2e-page-objects) &mdash; WooCommerce Page Objects package
 * WordPress plugin or WooCommerce extensions that will have e2e tests that use wp-e2e-page-objects or wc-e2e-page-objects.
