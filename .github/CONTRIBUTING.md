@@ -49,6 +49,22 @@ $ npm run pre-publish
 $ npm publish
 ```
 
+## Updating dependencies
+
+If you don't edit `package.json` directly, you shouldn't need to do anything.
+For example, if you run `npm install --save left-pad`, the `npm-shrinkwrap.json`
+file will be updated automatically.
+
+If you edit `package.json` manually, or you want to bump all our transitive
+dependencies to their most recent version, you'll need to run `npm run update-deps`
+(that will take a while). Internally, the script does the following:
+
+* Deletes local node_modules
+* Deletes your local copy of npm-shrinkwrap.json.
+* Runs `npm install --no-optional` twice. Due to npm 3 quirks, we need to call
+  this twice before packages fully resolve themselves.
+* Runs `npm shrinkwrap --dev` to generate a new `npm-shrinkwrap.json`.
+
 ## Generating Docs
 
 We use [JSDoc](http://usejsdoc.org/) to generate for API documentation and [tutorials](https://github.com/woocommerce/wp-e2e-webdriver/tree/master/docs/tutorials). To generate the eocs run:
