@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/woocommerce/wp-e2e-webdriver",
   "dependencies": {
-    "chromedriver": "2.33.2",
+    "chromedriver": "^2.36.0",
     "fs-extra": "^4.0.2",
     "saucelabs": "^1.4.0",
     "selenium-webdriver": "3.6.0",
