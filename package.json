@@ -39,13 +39,13 @@
   },
   "homepage": "https://github.com/woocommerce/wp-e2e-webdriver",
   "dependencies": {
-    "chromedriver": "^2.36.0",
-    "fs-extra": "^4.0.2",
+    "chromedriver": "^2.37.0",
+    "fs-extra": "^5.0.0",
     "saucelabs": "^1.4.0",
     "selenium-webdriver": "3.6.0",
     "slugs": "^0.1.3",
     "temp": "^0.8.3",
-    "url-join": "^2.0.2"
+    "url-join": "^4.0.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -58,12 +58,12 @@
     "chai-as-promised": "^7.1.1",
     "cross-env": "^5.1.1",
     "eslint": "^4.10.0",
-    "eslint-config-wpcalypso": "^1.2.0",
+    "eslint-config-wpcalypso": "^2.0.0",
     "eslint-plugin-wpcalypso": "^4.0.1",
     "istanbul": "^0.4.5",
     "jsdoc": "^3.5.5",
     "minami": "^1.2.3",
-    "mocha": "^4.0.1",
+    "mocha": "^5.0.5",
     "rimraf": "^2.6.2"
   }
 }
