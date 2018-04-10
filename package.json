@@ -1,6 +1,6 @@
 {
   "name": "wp-e2e-webdriver",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Webdriver manager and helper for WP end-to-end tests",
   "main": "./lib/index.js",
   "scripts": {
