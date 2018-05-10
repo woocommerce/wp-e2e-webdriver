@@ -154,6 +154,9 @@ export default class Manager {
 		if ( this.config.useCustomUA ) {
 			options.addArguments( 'user-agent=' + chromeUA );
 		}
+		if ( this.config.allowRunningInsecureContent ) {
+			options.addArguments( '--allow-running-insecure-content' );
+		}
 
 		return options;
 	}
