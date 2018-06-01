@@ -555,11 +555,11 @@ export function takeScreenshot( manager, currentTest ) {
 	const title = slug( currentTest.title );
 	const state = currentTest.state;
 	const screenSize = manager.getConfigScreenSize();
-	const datetime = new Date().toJSON().replace(/:/g, '-');
+	const datetime = new Date().toJSON().replace( /:/g, '-' );
 	const filename = `${ state }-${ screenSize }-${ title }-${ datetime }.png`;
 
 	driver.getCurrentUrl().then(
-		url => console.log( `FAILED: Taking screenshot of: '${ url }'` ),
+		url => console.log( `Taking screenshot of: '${ url }'` ),
 		err => {
 			console.log( `Could not capture the URL when taking a screenshot: '${ err }'` );
 		}
