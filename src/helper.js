@@ -28,7 +28,7 @@ function returnTrue() {
  * occurs after `waitMs` if element located by `selector` is not present and
  * displayed.
  *
- * @param {WebDriver} driver   - Instance of WebDriver.
+ * @param {object} driver   - Instance of WebDriver.
  * @param {object}    selector - Instance of locator, mechanism for locating an element
  *                               on the page. For example `By.css( '#content' )`.
  * @param {number}    waitMs   - How long to wait in millisecond. Defaults to 10000.
@@ -61,7 +61,7 @@ export function waitTillPresentAndDisplayed( driver, selector, waitMs = defaultW
  * Timeout occurs after `waitMs` if element located by `selector` is not present and
  * displayed.
  *
- * @param {WebDriver} driver   - Instance of WebDriver.
+ * @param {object} driver   - Instance of WebDriver.
  * @param {object}    selector - Instance of locator, mechanism for locating an element
  *                               on the page. For example `By.css( '#content' )`.
  * @param {number}    waitMs   - How long to wait in millisecond. Defaults to 10000.
@@ -96,7 +96,7 @@ export function isEventuallyPresentAndDisplayed( driver, selector, waitMs = defa
  * Wait for element, located by `selector`, until not present. Timeout occurs
  * after `waitMs` if element located by `selector` still present.
  *
- * @param {WebDriver} driver   - Instance of WebDriver.
+ * @param {object} driver   - Instance of WebDriver.
  * @param {object}    selector - Instance of locator, mechanism for locating an element
  *                               on the page. For example `By.css( '#content' )`.
  * @param {number}    waitMs   - How long to wait in millisecond. Defaults to 10000.
@@ -128,7 +128,7 @@ export function waitTillNotPresent( driver, selector, waitMs = defaultWaitMs ) {
  * Wait for the clickable element then click it. Timeout occurs after `waitMs`
  * if clickable element located by `selector` is not present.
  *
- * @param {WebDriver} driver   - Instance of WebDriver.
+ * @param {object} driver   - Instance of WebDriver.
  * @param {object}    selector - Instance of locator, mechanism for locating an element
  *                               on the page. For example `By.css( '#submit' )`.
  * @param {number}    waitMs   - How long to wait in millisecond. Defaults to 10000.
@@ -160,7 +160,7 @@ export function clickWhenClickable( driver, selector, waitMs = defaultWaitMs ) {
 /**
  * Check the checkbox element located by `selector`.
  *
- * @param {WebDriver} driver   - Instance of WebDriver.
+ * @param {object} driver   - Instance of WebDriver.
  * @param {object}    selector - Instance of locator, mechanism for locating an element
  *                               on the page. For example `By.css( 'input[type="checkbox"]' )`.
  *
@@ -193,7 +193,7 @@ export function setCheckbox( driver, selector ) {
 /**
  * Uncheck the checkbox element located by `selector`.
  *
- * @param {WebDriver} driver   - Instance of WebDriver.
+ * @param {object} driver   - Instance of WebDriver.
  * @param {object}    selector - Instance of locator, mechanism for locating an element
  *                               on the page. For example `By.css( 'input[type="checkbox"]' )`.
  *
@@ -225,7 +225,7 @@ export function unsetCheckbox( driver, selector ) {
  * Wait for the element value is cleared. Timeout occurs after `waitMs` if
  * the element located by `selector` is not present and displayed.
  *
- * @param {WebDriver} driver   - Instance of WebDriver.
+ * @param {object} driver   - Instance of WebDriver.
  * @param {object}    selector - Instance of locator, mechanism for locating an element
  *                               on the page. For example `By.css( 'input[name="username"]' )`.
  * @param {number}    waitMs   - How long to wait in millisecond. Defaults to 10000.
@@ -261,13 +261,12 @@ export function waitForFieldClearable( driver, selector, waitMs = defaultWaitMs 
 /**
  * Set the element's value, located by `selector`, with `value`. Timeout occurs
  * after `waitMs` if the element located by `selector` is not present and displayed.
-
  *
- * @param {WebDriver} driver   - Instance of WebDriver.
+ * @param {object}    driver   - Instance of WebDriver.
  * @param {object}    selector - Instance of locator, mechanism for locating an element
  *                               on the page. For example `By.css( 'input[name="username"]' )`.
  * @param {string}    value    - Value to set to the element.
- * @param {objec}     options  - Optional object where `secureValue` is a boolea
+ * @param {object}    options  - Optional object where `secureValue` is a boolea
  *                               indicating the element's value shouldn't be exposed
  *                               in the log ( e.g input[type="password"] ), `waitMs`
  *                               is time in millisecond to wait for the element
@@ -308,7 +307,7 @@ export function setWhenSettable( driver, selector, value, { secureValue = false,
 /**
  * Select option with text `optionText` in select element lcoated by `dropdownSelector`.
  *
- * @param {WebDriver} driver           - Instance of WebDriver.
+ * @param {object} driver           - Instance of WebDriver.
  * @param {object}    dropdownSelector - Instance of locator, mechanism for locating
  *                                       an element on the page. For example
  *                                       `By.css( 'select[name="country"]' )`.
@@ -336,9 +335,9 @@ export function selectOption( driver, dropdownSelector, optionText ) {
 /**
  * Clear cookies and delete localStorage.
  *
- * @param {WebDriver} driver - Instance of WebDriver.
+ * @param {object} driver - Instance of WebDriver.
  *
- * @return {bool} Returns true once localStorage is cleared.
+ * @return {boolean} Returns true once localStorage is cleared.
  */
 export function clearCookiesAndDeleteLocalStorage( driver ) {
 	driver.manage().deleteAllCookies();
@@ -350,7 +349,7 @@ export function clearCookiesAndDeleteLocalStorage( driver ) {
  *
  * Under the hood invoke `window.localStorage.clear()`.
  *
- * @param {WebDriver} driver - Instance of WebDriver.
+ * @param {object} driver - Instance of WebDriver.
  */
 export function deleteLocalStorage( driver ) {
 	driver.getCurrentUrl().then( ( url ) => {
@@ -363,7 +362,7 @@ export function deleteLocalStorage( driver ) {
 /**
  * Scroll up once by pressing page up key.
  *
- * @param {WebDriver} driver - Instance of WebDriver.
+ * @param {object} driver - Instance of WebDriver.
  * @param {number}    waitMs - Sleep for `waitMs` after pressing page up.
  */
 export function scrollUp( driver, waitMs = 2000 ) {
@@ -377,7 +376,7 @@ export function scrollUp( driver, waitMs = 2000 ) {
 /**
  * Mouse move into element located by `selector`.
  *
- * @param {WebDriver} driver   - Instance of WebDriver.
+ * @param {object} driver   - Instance of WebDriver.
  * @param {object}    selector - Instance of locator, mechanism for locating an element
  *                               on the page. For example `By.css( 'input[name="username"]' )`.
  *
@@ -411,7 +410,7 @@ export function mouseMoveTo( driver, selector ) {
 /**
  * Scroll down once by pressing page down key.
  *
- * @param {WebDriver} driver - Instance of WebDriver.
+ * @param {object} driver - Instance of WebDriver.
  * @param {number}    waitMs - Sleep for `waitMs` after pressing page down.
  */
 export function scrollDown( driver, waitMs = 2000 ) {
@@ -425,8 +424,8 @@ export function scrollDown( driver, waitMs = 2000 ) {
 /**
  * Write image `data` to `dst`.
  *
- * @param {String|Buffer|Uint8Array} data - Date to write.
- * @param {dst}                      dst  - Path of the file where data being
+ * @param {string|Buffer|Uint8Array} data - Date to write.
+ * @param {string}                   dst  - Path of the file where data being
  *                                          written into.
  *
  * @example
@@ -442,7 +441,7 @@ export function scrollDown( driver, waitMs = 2000 ) {
  *   helper.writeImage( data, dst );
  * } );
  *
- * @return {unefined} Returns value from `fs.writeFileSync` which is `undefined`.
+ * @return {undefined} Returns value from `fs.writeFileSync` which is `undefined`.
  */
 export function writeImage( data, dst ) {
 	fs.ensureFileSync( dst );
@@ -452,8 +451,8 @@ export function writeImage( data, dst ) {
 /**
  * Write text `data` to `dst`.
  *
- * @param {String|Buffer|Uint8Array} content - Date to write.
- * @param {dst}                      dst     - Path of the file where data being
+ * @param {string|Buffer|Uint8Array} content - Date to write.
+ * @param {string}                   dst     - Path of the file where data being
  *                                             written into.
  *
  * @example
@@ -471,7 +470,7 @@ export function writeImage( data, dst ) {
  *   } );
  * } );
  *
- * @return {unefined} Returns value from `fs.writeFileSync` which is `undefined`.
+ * @return {undefined} Returns value from `fs.writeFileSync` which is `undefined`.
  */
 export function writeText( content, dst ) {
 	fs.ensureFileSync( dst );
@@ -485,9 +484,9 @@ export function writeText( content, dst ) {
  * media types is allowed to be uploaded. Under the hood it copies pre-defined
  * media in this package into `filename` and returns the file details.
  *
- * @param {String} filename - Full path of filename where new media is going
+ * @param {string} filename - Full path of filename where new media is going
  *                            to be created.
- * @param {String} type     - Media type.
+ * @param {string} type     - Media type.
  *
  * @example
  *
@@ -531,8 +530,8 @@ export function getMediaWithFilename( filename, type = 'jpg' ) {
  * The best place to use this is in `test.afterEach` hook where all tests
  * are captured.
  *
- * @param {WebDriverManager} manager     - Instance of `WebDriverManager`.
- * @param {Object}           currentTest - Current test.
+ * @param {object} manager     - Instance of `WebDriverManager`.
+ * @param {object} currentTest - Current test.
  *
  * @example
  *
@@ -542,7 +541,7 @@ export function getMediaWithFilename( filename, type = 'jpg' ) {
  * test.afterEach( 'Take screenshot', function() {
  *   return helper.takeScreenshot( global.__MANAGER__, this.currentTest );
  * } );
-
+ *
  * @return {Promise} A promise that will be resolved with `undefined` once
  *                   screenshot is written to `manager.config.screenshotsDir`.
  */

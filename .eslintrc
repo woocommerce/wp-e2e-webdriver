@@ -8,6 +8,12 @@
 	rules: {
 		'array-bracket-spacing': [ 1, 'always' ],
 		'brace-style': [ 1, '1tbs' ],
+		'comma-dangle': [ 'error', {
+			'arrays': 'only-multiline',
+			'objects': 'only-multiline',
+			'functions': 'never',
+			'exports': 'only-multiline',
+		} ],
 		'comma-spacing': 1,
 		curly: 1,
 		'computed-property-spacing': [ 1, 'always' ],
