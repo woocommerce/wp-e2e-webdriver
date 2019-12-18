@@ -39,7 +39,7 @@ export default class Manager {
 	/**
 	 * Creates a manager.
 	 *
-	 * @param {String} browser - Browser to use. Valid value includes `chrome`
+	 * @param {string} browser - Browser to use. Valid value includes `chrome`
 	 *                           and 'firefox'.
 	 * @param {object} config  - Manager configuration.
 	 */
@@ -60,7 +60,7 @@ export default class Manager {
 	 * const manager = new WebDriverManager( 'chrome' );
 	 * const driver = manager.getDriver();
 	 *
-	 * @return {WebDriver} Instance of WebDriver.
+	 * @return {object} Instance of WebDriver.
 	 */
 	getDriver() {
 		return this.driver;
@@ -202,7 +202,7 @@ export default class Manager {
 	/**
 	 * Get screen size from manager's configuration.
 	 *
-	 * @return {String} Screen size like 'desktop' or 'mobile'.
+	 * @return {string} Screen size like 'desktop' or 'mobile'.
 	 */
 	getConfigScreenSize() {
 		let screenSize = this.config.screenSize || process.env.BROWSERSIZE;
@@ -215,14 +215,14 @@ export default class Manager {
 	/**
 	 * Get object representation of `screenSize`.
 	 *
-	 * @param {String} screenSize - Screen size like 'desktop' or 'mobile'.
+	 * @param {string} screenSize - Screen size like 'desktop' or 'mobile'.
 	 *
 	 * @return {object} Object representation of screen size.
 	 */
 	getScreenSizeAsObject( screenSize ) {
 		switch ( screenSize ) {
 			case 'mobile':
-				return { width: 415, height: 1000 };
+				return { width: 500, height: 1000 };
 			case 'tablet':
 				return { width: 1024, height: 1000 };
 			case 'desktop':
@@ -240,13 +240,13 @@ export default class Manager {
 	/**
 	 * Resize the browser to `screenSize`.
 	 *
-	 * @param {String} screenSize - Screen size like 'desktop' or 'mobile'.
+	 * @param {string} screenSize - Screen size like 'desktop' or 'mobile'.
 	 */
 	resizeBrowser( screenSize ) {
 		if ( typeof ( screenSize ) === 'string' ) {
 			switch ( screenSize.toLowerCase() ) {
 				case 'mobile':
-					this.driver.manage().window().setSize( 415, 1000 );
+					this.driver.manage().window().setSize( 500, 1000 );
 					break;
 				case 'tablet':
 					this.driver.manage().window().setSize( 1024, 1000 );
@@ -273,7 +273,7 @@ export default class Manager {
 	/**
 	 * Quit currently running browser.
 	 *
-	 * @param {Number} waitForMs - Wait time in millisecond before quit.
+	 * @param {number} waitForMs - Wait time in millisecond before quit.
 	 *
 	 * @return {Promise} A promise that will be resolved once browser quitted.
 	 */
@@ -304,7 +304,7 @@ export default class Manager {
 	/**
 	 * Get base URL from manager's configuration.
 	 *
-	 * @return {String} Base URL from manager's configuration.
+	 * @return {string} Base URL from manager's configuration.
 	 */
 	getBaseUrl() {
 		return this.config.baseUrl;
@@ -313,9 +313,9 @@ export default class Manager {
 	/**
 	 * Get page url given a `pagePath` without the hostname.
 	 *
-	 * @param {String} pagePath - Page path.
+	 * @param {string} pagePath - Page path.
 	 *
-	 * @return {String} Full URL. Joined base URL with `pagePath`.
+	 * @return {string} Full URL. Joined base URL with `pagePath`.
 	 */
 	getPageUrl( pagePath = '/' ) {
 		return urljoin( this.getBaseUrl(), pagePath );
